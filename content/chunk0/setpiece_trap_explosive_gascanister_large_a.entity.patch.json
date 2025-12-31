@@ -87,31 +87,6 @@
 			]
 		},
 		{
-			"SubEntityOperation": [
-				"69dd9bed3d4eda0c",
-				{
-					"SetExposedEntity": [
-						"LegalProfession",
-						{
-							"isArray": true,
-							"refersTo": [
-								{
-									"ref": "ae7f0113ad8fd019",
-									"externalScene": null,
-									"exposedEntity": "LegalProfession"
-								},
-								{
-									"ref": "cafe6d2ab906c4ba",
-									"externalScene": null,
-									"exposedEntity": "LegalProfession"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
 			"AddEntity": [
 				"cafe123a31fd6889",
 				{
