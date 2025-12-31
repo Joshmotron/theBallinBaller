@@ -1,0 +1,59 @@
+{
+	"tempHash": "00B6925A0B7879E1",
+	"tbluHash": "00E24725F3AE2373",
+	"rootEntity": "cafeef5066128f10",
+	"entities": {
+		"cafeef5066128f10": {
+			"parent": null,
+			"name": "Keyword_ITEM_BALLINBALLER",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint",
+			"inputCopying": {
+				"GetKeyword": { "GetKeyword": ["cafebc16534a1230"] }
+			},
+			"propertyAliases": {
+				"m_aHolders": [
+					{
+						"originalProperty": "m_aHolders",
+						"originalEntity": "cafebc16534a1230"
+					}
+				]
+			},
+			"exposedInterfaces": { "ZKeywordEntity": "cafebc16534a1230" }
+		},
+		"cafebc16534a1230": {
+			"parent": "cafeef5066128f10",
+			"name": "Keyword_ITEM_BALLINBALLER",
+			"factory": "[modules:/zkeywordentity.class].pc_entitytype",
+			"blueprint": "[modules:/zkeywordentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sKeyword": {
+					"type": "ZString",
+					"value": "ITEM_BALLINBALLER"
+				},
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": []
+				},
+				"m_rHolder": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeef5066128f10",
+					"postInit": true
+				}
+			},
+			"outputCopying": {
+				"Keyword": { "Keyword": ["cafeef5066128f10"] }
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}

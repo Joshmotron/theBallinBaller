@@ -1,0 +1,497 @@
+{
+	"tempHash": "0032E0EFBD3D964D",
+	"tbluHash": "0010AE5F8DFA1A5E",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"dde59762f49cb63c",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aValues",
+						[
+							{
+								"AddItemAfter": ["16856f34938940a4", "cafe8a2684c617c8"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"d77e48f0b4dbbf7e",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aSubactions",
+						[
+							{
+								"AddItemAfter": ["3afd852cb19583c8", "cafed2bf7376fb40"]
+							},
+							{
+								"AddItemAfter": ["3afd852cb19583c8", "cafeac6bb9bbfb7f"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"d77e48f0b4dbbf7e",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aNearHeroEnableConditionListeners",
+						[
+							{
+								"AddItemAfter": ["4dabd553c9840532", "cafee1eb8a8bd4c3"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f9b8575ac53def18",
+				{
+					"AddPropertyAliasConnection": [
+						"OuterGlowTargets",
+						{
+							"originalProperty": "OuterGlowTargets",
+							"originalEntity": "cafeac6bb9bbfb7f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f9b8575ac53def18",
+				{
+					"AddPropertyAliasConnection": [
+						"m_rPromptDescriptionTextResource",
+						{
+							"originalProperty": "m_rPromptDescriptionTextResource",
+							"originalEntity": "cafed2bf7376fb40"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f9b8575ac53def18",
+				{
+					"AddPropertyAliasConnection": [
+						"m_rPromptDescriptionTextResource",
+						{
+							"originalProperty": "m_rPromptDescriptionTextResource",
+							"originalEntity": "cafeac6bb9bbfb7f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f9b8575ac53def18",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sPromptDescriptionText",
+						{
+							"originalProperty": "m_sPromptDescriptionText",
+							"originalEntity": "cafed2bf7376fb40"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f9b8575ac53def18",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sPromptDescriptionText",
+						{
+							"originalProperty": "m_sPromptDescriptionText",
+							"originalEntity": "cafeac6bb9bbfb7f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee1eb8a8bd4c3",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "HeroKeywordCondition01",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee0a3d8b7ab06",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee0a3d8b7ab06",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea446d28a5c9d",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed2bf7376fb40",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "Interaction_Subaction_Repair_With_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "b21db989424d5721"
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "4bd04529c45cbc03",
+								"externalScene": null,
+								"exposedEntity": "InteractionPointSpatial"
+							}
+						},
+						"m_rPromptDescriptionTextPassiveResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_missingsomeitem.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_wireplug.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_repairwireplug.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bCanBeOperatedFromAnyAngle": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bOverrideInteractionRangeVR": {
+							"type": "bool",
+							"value": true
+						},
+						"m_rPromptTextPassiveResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_repairwireplug.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["1e956fb42bf0acb9"]
+						},
+						"m_rKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee0a3d8b7ab06"
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Screwdriver"
+						},
+						"m_ConditionList_Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["9dcd2f810142332a", "cafee1eb8a8bd4c3", "dde59762f49cb63c"]
+						},
+						"m_ConditionList_Visible": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["9dcd2f810142332a", "18ea54ff9124ef99"]
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_pIllegalCondition": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "c4e388acd64a1cf0",
+								"externalScene": null,
+								"exposedEntity": "OutputValue"
+							}
+						},
+						"m_RuntimeNetworkResourceID": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_screwdriver_0cm.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": "1be4235a5c0e9f70"
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": "1e014011b9839f15"
+						},
+						"m_sPromptDescriptionText": {
+							"type": "ZString",
+							"value": ""
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						}
+					},
+					"events": {
+						"AnimEvent_Generic00": {
+							"SetFalse": ["6f52e8376697d018"]
+						},
+						"Started": {
+							"SetTrue": ["b139f106cb616dd3"],
+							"Poll": ["1e119f0f5b634435"]
+						},
+						"Completed": {
+							"SetFalse": ["b139f106cb616dd3"],
+							"StartDelay": ["18ea54ff9124ef99"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeac6bb9bbfb7f",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "Interaction_Subaction_Sabotage_With_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "4bd04529c45cbc03",
+								"externalScene": null,
+								"exposedEntity": "InteractionPointSpatial"
+							}
+						},
+						"m_bCanBeOperatedFromAnyAngle": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bOverrideInteractionRangeVR": {
+							"type": "bool",
+							"value": true
+						},
+						"m_rPromptDescriptionTextPassiveResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_missingsomeitem.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["7bc3f12f9841050e"]
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_exposewire.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_wireplug.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafea446d28a5c9d"
+						},
+						"m_rPromptTextPassiveResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_exposewire.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee0a3d8b7ab06"
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Screwdriver"
+						},
+						"m_ConditionList_Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["46f30913e92cef1a", "cafee1eb8a8bd4c3", "dde59762f49cb63c"]
+						},
+						"m_ConditionList_Visible": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["46f30913e92cef1a", "18ea54ff9124ef99"]
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_pIllegalCondition": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "c4e388acd64a1cf0",
+								"externalScene": null,
+								"exposedEntity": "OutputValue"
+							}
+						},
+						"m_RuntimeNetworkResourceID": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_screwdriver_0cm.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": "1be4235a5c0e9f70"
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": "1e014011b9839f15"
+						},
+						"m_sPromptDescriptionText": {
+							"type": "ZString",
+							"value": ""
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						}
+					},
+					"events": {
+						"AnimEvent_Generic00": {
+							"SetTrue": ["6f52e8376697d018"]
+						},
+						"Started": {
+							"SetTrue": ["b139f106cb616dd3"],
+							"Poll": ["1e119f0f5b634435"]
+						},
+						"Completed": {
+							"SetFalse": ["b139f106cb616dd3"],
+							"StartDelay": ["18ea54ff9124ef99"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe8a2684c617c8",
+				{
+					"parent": "f9b8575ac53def18",
+					"name": "IsKeywordInHands01",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckLeftHand": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee0a3d8b7ab06",
+							"postInit": true
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -1,0 +1,237 @@
+{
+	"tempHash": "00510F3AAE5A6773",
+	"tbluHash": "0025D0F95A87B82A",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"64a14c6a04f07f64",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bActionHasValidDisguise",
+						{
+							"originalProperty": "m_bActionHasValidDisguise",
+							"originalEntity": "cafeb3e5bf4485c7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"64a14c6a04f07f64",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bIsWorking",
+						{
+							"originalProperty": "m_bIsWorking",
+							"originalEntity": "cafeb3e5bf4485c7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"64a14c6a04f07f64",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sId",
+						{
+							"originalProperty": "m_sId",
+							"originalEntity": "cafeb3e5bf4485c7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"64a14c6a04f07f64",
+				{
+					"SetExposedEntity": [
+						"LegalProfession",
+						{
+							"isArray": true,
+							"refersTo": [
+								{
+									"ref": "b787332200feca61",
+									"externalScene": null,
+									"exposedEntity": "LegalProfession"
+								},
+								{
+									"ref": "cafeb3e5bf4485c7",
+									"externalScene": null,
+									"exposedEntity": "LegalProfession"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb3e5bf4485c7",
+				{
+					"parent": "64a14c6a04f07f64",
+					"name": "SetPieceHelpers_Activator_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "99a1955d4f00f85f"
+						},
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "c89ed94b-6172-48ed-a63b-2da2baa1b5ad"
+						},
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["bc3d6c59d1b5dead"]
+						},
+						"m_TurnOnAnim": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_wrench_120cm_down.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_loosenvalve.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"actionm_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_gasheaterlamp.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_aPromptPositions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [
+								{
+									"ref": "ff0241092aa10b28",
+									"externalScene": null,
+									"exposedEntity": "PromptSpatial"
+								}
+							]
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "ff0241092aa10b28",
+								"externalScene": null,
+								"exposedEntity": "InteractionPointSpatial"
+							}
+						},
+						"m_rToolKeywordRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe50ded1ee39bb",
+							"postInit": true
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["99a1955d4f00f85f"]
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_bActionHasValidDisguise": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						},
+						"name_metricvalue": {
+							"type": "ZString",
+							"value": "Explosive_GasHeaterLamp"
+						},
+						"m_bWorldAlignPrompt": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bIgnoreCollision": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bRequiresHitmanFacing": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Wrench"
+						}
+					},
+					"events": {
+						"OnInteractionAnimEvent": {
+							"Poll": ["67ee826bdbc44278"]
+						}
+					},
+					"outputCopying": {
+						"OnInteractionAnimEvent": {
+							"OnLeaking": ["64a14c6a04f07f64"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe50ded1ee39bb",
+				{
+					"parent": "64a14c6a04f07f64",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0ed2deb0a289",
+				{
+					"parent": "64a14c6a04f07f64",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

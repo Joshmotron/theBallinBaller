@@ -1,9 +1,49 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "0.1.0",
-	"id": "YourPreferredAlias.AnIDForTheMod",
-	"name": "Test Mod",
-	"description": "A truly amazing mod",
-	"authors": ["Your Preferred Alias"],
-	"frameworkVersion": "2.25.1"
+	"version": "1.1.5",
+	"id": "Ballin.Baller9000",
+	"name": "The Ballin' Baller 1.1.5",
+	"description": "The Ultimate(?) Cheat Gun",
+	"authors": ["Reverend Tim Tom"],
+	"contentFolders": ["content"],
+	"blobsFolders": ["blobs"],
+	"localisedLines": {
+		"0099F66B89297791": "SETPIECES_LOCALIZATION_PROMPT_BALLER_UNLOCK",
+		"00D69ADEDF8CB68C": "SETPIECES_LOCALIZATION_PROMPT_BALLER_SABOTAGE",
+		"006CA3A000046109": "SETPIECES_LOCALIZATION_PROMPT_BALLER_TAMPER",
+		"00593F78217DE5B1": "SETPIECES_LOCALIZATION_PROMPT_BALLER_EXPOSEWIRE",
+		"002CA77C935534EF": "SETPIECES_LOCALIZATION_PROMPT_BALLER_REPAIRWIREPLUG",
+		"008609AEF7432F02": "SETPIECES_LOCALIZATION_PROMPT_BALLER_PUNCTURE",
+		"00F1D8D2B2323AB3": "SETPIECES_LOCALIZATION_PROMPT_BALLER_REPAIR",
+		"000489357476B9B9": "SETPIECES_LOCALIZATION_PROMPT_BALLER_PICKLOCK",
+		"0099D5755298D836": "SETPIECES_LOCALIZATION_PROMPT_BALLER_USE",
+		"0091A84FA5D3DD3A": "SETPIECES_LOCALIZATION_PROMPT_BALLER_SWIPE",
+		"003ADADF175D1024": "SETPIECES_LOCALIZATION_PROMPT_BALLER_LOOSENVALVE",
+		"0026B2A5FF701784": "SETPIECES_LOCALIZATION_PROMPT_BALLER_CREATEOILLEAK",
+		"00BD7BC48FABA5FF": "SETPIECES_LOCALIZATION_PROMPT_BALLER_OPENBODYDUMP",
+		"00C8342610CB548E": "SETPIECES_LOCALIZATION_DESCRIPTION_BALLER_FUSEBOX",
+		"007185C3A79394D9": "FIREARMS_HERO_PISTOL_BALLINBALLER_NAME",
+		"0008EDFF36E2CD8D": "FIREARMS_HERO_PISTOL_BALLINBALLER_DESC"
+	},
+	"localisation": {
+		"english": {
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_UNLOCK": "Unlock with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_SABOTAGE": "Sabotage with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_TAMPER": "Tamper with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_EXPOSEWIRE": "Expose Wire with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_REPAIRWIREPLUG": "Repair Wire with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_PUNCTURE": "Puncture with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_REPAIR": "Repair with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_PICKLOCK": "Pick Lock with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_USE": "Use Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_SWIPE": "Swipe with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_LOOSENVALVE": "Loosen Valve with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_CREATEOILLEAK": "Create Oil Leak with Baller",
+			"SETPIECES_LOCALIZATION_PROMPT_BALLER_OPENBODYDUMP": "Open Bodydump like a Baller",
+			"SETPIECES_LOCALIZATION_DESCRIPTION_BALLER_FUSEBOX": "Fusebox like a Baller",
+			"FIREARMS_HERO_PISTOL_BALLINBALLER_NAME": "\"The\" Ballin Baller",
+			"FIREARMS_HERO_PISTOL_BALLINBALLER_DESC": "Created by Derek McInnis and Hector Delgado. These two men, brought together to fight back against those who mocked them, began a most fruitful collaboration to forge the deadliest weapon a single person may carry. Luckily for you, Diana is very persuasive. Contains an ingenious design to allow six different magazines in one: mostly harmless bullets, emetic darts, sedative darts, accidental shockwaves, lethal shockwaves, and taser darts."
+		}
+	},
+	"frameworkVersion": "2.33.33"
 }

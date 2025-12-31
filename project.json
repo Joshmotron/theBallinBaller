@@ -1,4 +1,8 @@
 {
-	"$schema": "https://raw.githubusercontent.com/atampy25/quickentity-editor-next/main/src/lib/project-schema.json",
-	"customPaths": []
+	"customPaths": [
+		"[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+		"[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint",
+		"[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entitytemplate",
+		"[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entityblueprint"
+	]
 }

@@ -1,0 +1,303 @@
+{
+	"tempHash": "00376B0AC9245C86",
+	"tbluHash": "00B1F78AD5118A59",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"132a87de33afe000",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_fOverrideInteractionRangeValue",
+						"value": 2.0
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8145ce6369fbc38",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_fOverrideInteractionRangeValue",
+						"value": 2.0
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"5b51167e20a6ed53",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aSubactions",
+						[
+							{
+								"AddItemAfter": ["6a8ea3ece8fadd40", "cafeb086f0c7d650"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"3ab1525ca1b6978b",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aNearHeroEnableConditionListeners",
+						[
+							{
+								"AddItemAfter": ["dd5b1ce055041cd9", "cafe54ae9c6b468f"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bAlignVertically",
+						{
+							"originalProperty": "m_bAlignVertically",
+							"originalEntity": "cafeb086f0c7d650"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe84bba7d69c77",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe54ae9c6b468f",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "HeroKeywordCondition02",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe84bba7d69c77"
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb086f0c7d650",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "IS_UseBallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_eActionType": {
+							"type": "EActionType",
+							"value": "AT_USE_NORMAL"
+						},
+						"m_sPromptText": {
+							"type": "ZString",
+							"value": "\n      "
+						},
+						"m_rKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe84bba7d69c77"
+						},
+						"m_ConditionList_Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe55ca2176132c"]
+						},
+						"m_bCanBeOperatedWithItemsInHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_RuntimeNetworkResourceID": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_lockpick_90cm.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_picklock.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_rContextLocation": {
+							"type": "SEntityTemplateReference",
+							"value": "2ccc04a736a635eb"
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_GenericTool"
+						},
+						"m_rUsableConditionKeywordsA": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe84bba7d69c77"
+						},
+						"m_rNonExecutableDescriptionResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/hud.sweetmenutext?/ui_actions_missing_general.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafed5a30c1722a0"
+						},
+						"m_rPromptDescriptionTextPassiveResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_itemname.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bOneItemPerSubaction": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "f9215c6e92a59f47",
+								"externalScene": null,
+								"exposedEntity": "LockpickInteraction"
+							}
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "f9215c6e92a59f47",
+								"externalScene": null,
+								"exposedEntity": "LockpickInteraction"
+							}
+						},
+						"m_ConditionList_Visible": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe0b65d3c49971"]
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						}
+					},
+					"events": {
+						"AnimEvent_Generic00": {
+							"MUSIC_PLOT_REWARD_GetKeyword": ["852ed8e4243377b7"],
+							"Poll": ["5ab11a77824a1a9d"]
+						},
+						"Started": { "SetTrue": ["fcbf4e21905e891b"] },
+						"Completed": { "Poll": ["fa8616c8c4e92943"] }
+					},
+					"outputCopying": {
+						"AnimEvent_Generic07": {
+							"IS_USeLockPic_AnimEvent_Generic07": ["96aaa4b84aac2399"]
+						},
+						"SoundEvent02": {
+							"Is_UseLockpick_eSoundEvent02": ["96aaa4b84aac2399"]
+						},
+						"Started": {
+							"StartedLockPick": ["96aaa4b84aac2399"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed5a30c1722a0",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "f93b99a3-aef6-419f-b303-59470577696d"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe55ca2176132c",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "ValueBool_Operation_03",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe54ae9c6b468f", "cafe0b65d3c49971"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0b65d3c49971",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "Can use ballinballer",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bValue": { "type": "bool", "value": true }
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

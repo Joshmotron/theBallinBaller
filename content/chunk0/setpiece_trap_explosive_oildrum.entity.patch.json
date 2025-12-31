@@ -1,0 +1,251 @@
+{
+	"tempHash": "006FA8AAA918C761",
+	"tbluHash": "0020BE4AFB694AA0",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"ab7241fdd4f83224",
+				{
+					"AddPropertyAliasConnection": [
+						"m_aValues",
+						{
+							"originalProperty": "m_aValues",
+							"originalEntity": "cafeb2bf018b8941"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ab7241fdd4f83224",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bActionHasValidDisguise",
+						{
+							"originalProperty": "m_bActionHasValidDisguise",
+							"originalEntity": "cafeb2bf018b8941"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ab7241fdd4f83224",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sId",
+						{
+							"originalProperty": "m_sId",
+							"originalEntity": "cafeb2bf018b8941"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafec5b0b7e82fb4",
+				{
+					"parent": "ab7241fdd4f83224",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe03ca70256db3",
+				{
+					"parent": "ab7241fdd4f83224",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb2bf018b8941",
+				{
+					"parent": "ab7241fdd4f83224",
+					"name": "SetPieceHelpers_Activator_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_TurnOnAnim": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_screwdriver_0cm_stab.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_bCanBeOperatedFromAnyAngle": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bActionHasValidDisguise": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bWorldAlignRotateHorizontalOnly": {
+							"type": "bool",
+							"value": true
+						},
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "319affbb-91bc-436c-86b2-a394486be8c6"
+						},
+						"name_metricvalue": {
+							"type": "ZString",
+							"value": "Explosive_OilDrum"
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_puncture.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Screwdriver"
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						},
+						"m_fAdditionalAlignRadius": {
+							"type": "float32",
+							"value": 0.4
+						},
+						"m_bIgnoreZeroWeightEvents": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_fAttentionGainModifier": {
+							"type": "float32",
+							"value": -6.0
+						},
+						"m_fAttentionGainRange": {
+							"type": "float32",
+							"value": -10.0
+						},
+						"m_fIllegalDuration": {
+							"type": "float32",
+							"value": -1.0
+						},
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec5b0b7e82fb4"
+						},
+						"actionm_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_oildrum.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bRequiresHitmanInFront": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": "80a8a583f3732856"
+						},
+						"m_rToolKeywordRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe03ca70256db3",
+							"postInit": true
+						},
+						"m_aPromptPositions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["002ef071c7974d3b"],
+							"postInit": true
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": "92f3a474993bd0ce",
+							"postInit": true
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["db6abfc471887f9c"],
+							"postInit": true
+						},
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["d5f9954288b81164"],
+							"postInit": true
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": "d46b7bd57f3e6329",
+							"postInit": true
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "ab7241fdd4f83224",
+							"postInit": true
+						}
+					},
+					"events": {
+						"Started": {
+							"SetFalse": ["d5f9954288b81164"],
+							"Poll": ["3b27d195564a1970", "46b5eea1b2482f1c"]
+						},
+						"AnimEvent_Generic07_Sound": {
+							"Play_Activate_Device_Event": ["967288544baaa48a"],
+							"Send": ["79e1bf5c65cddf65"]
+						},
+						"OnInteractionAnimEvent": {
+							"SetTrue": ["74a4441def85bb66"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -1,0 +1,243 @@
+{
+	"tempHash": "0084DAF9CB83C47F",
+	"tbluHash": "00FD3CCB3915AA77",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"9a89f983ff8f97dd",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bActionHasValidDisguise",
+						{
+							"originalProperty": "m_bActionHasValidDisguise",
+							"originalEntity": "cafe42f23d0827e8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"9a89f983ff8f97dd",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sId",
+						{
+							"originalProperty": "m_sId",
+							"originalEntity": "cafe42f23d0827e8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe4230adf33be7",
+				{
+					"parent": "9a89f983ff8f97dd",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5c68af2ed91e",
+				{
+					"parent": "9a89f983ff8f97dd",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe42f23d0827e8",
+				{
+					"parent": "9a89f983ff8f97dd",
+					"name": "SetPieceHelpers_Activator_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -180.0
+								},
+								"position": {
+									"x": 0.000025,
+									"y": -0.52,
+									"z": 0.0
+								}
+							}
+						},
+						"m_TurnOnAnim": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_wrench_0cm_down.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_aPromptPositions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [
+								{
+									"ref": "34ab7cb7ee981fd9",
+									"externalScene": null,
+									"exposedEntity": "PromptSpatial"
+								}
+							]
+						},
+						"m_bCanBeOperatedFromAnyAngle": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "34ab7cb7ee981fd9",
+								"externalScene": null,
+								"exposedEntity": "InteractionPointSpatial"
+							}
+						},
+						"m_bActionHasValidDisguise": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bWorldAlignRotateHorizontalOnly": {
+							"type": "bool",
+							"value": true
+						},
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "56646a6e-5c7f-473f-90e3-87be18f0b680"
+						},
+						"name_metricvalue": {
+							"type": "ZString",
+							"value": "Explosive_FuelTank"
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_loosenvalve.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Wrench"
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fAdditionalAlignRadius": {
+							"type": "float32",
+							"value": -0.05
+						},
+						"m_bIgnoreZeroWeightEvents": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["601b93c308efaf37"]
+						},
+						"m_rToolKeywordRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe4230adf33be7"
+						},
+						"actionm_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_fueltank.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bRequiresHitmanInFront": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCanBeOperatedWithItemsInHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bRequiresHitmanFacing": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIgnoreCollision": {
+							"type": "bool",
+							"value": false
+						},
+						"m_eTurnOnActionType": {
+							"type": "EActionType",
+							"value": "AT_USE_HOLD"
+						},
+						"m_rContextLocation": {
+							"type": "SEntityTemplateReference",
+							"value": "34ab7cb7ee981fd9"
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "34ab7cb7ee981fd9"
+						},
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe5c68af2ed91e"
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": "37ab6bc129a7a313"
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": "37ab6bc129a7a313"
+						},
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["18bcb528a9eb4d52"],
+							"postInit": true
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						}
+					},
+					"events": {
+						"AnimEvent_Generic07_Sound": {
+							"Play_Activate_Device_Event": ["9069c3c3655bdf16"]
+						},
+						"Started": { "Poll": ["3dccfab0b603eff8"] },
+						"Completed": { "Poll": ["abedcea17ccbdc66"] }
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

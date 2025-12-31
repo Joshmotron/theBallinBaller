@@ -1,0 +1,240 @@
+{
+	"tempHash": "0014DCE1B101C43E",
+	"tbluHash": "00899CE5396BE032",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"581bab7d3e93df01",
+				{
+					"AddPropertyAliasConnection": [
+						"m_aValues",
+						{
+							"originalProperty": "UsabilityConditions",
+							"originalEntity": "cafe9358c358a0e4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"581bab7d3e93df01",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bActionHasValidDisguise",
+						{
+							"originalProperty": "m_bActionHasValidDisguise",
+							"originalEntity": "cafe9358c358a0e4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"581bab7d3e93df01",
+				{
+					"AddPropertyAliasConnection": [
+						"m_bIsWorking",
+						{
+							"originalProperty": "m_bIsWorking",
+							"originalEntity": "cafe9358c358a0e4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"581bab7d3e93df01",
+				{
+					"AddPropertyAliasConnection": [
+						"m_sId",
+						{
+							"originalProperty": "m_sId",
+							"originalEntity": "cafe9358c358a0e4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe982ef9df3bbb",
+				{
+					"parent": "581bab7d3e93df01",
+					"name": "ItemKey_BallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3f3c29930f8b",
+				{
+					"parent": "581bab7d3e93df01",
+					"name": "Keyword_ITEM_BALLINBALLER",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe9358c358a0e4",
+				{
+					"parent": "581bab7d3e93df01",
+					"name": "SetPieceHelpers_Activator_BallinBaller",
+					"factory": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_singletool.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_rToolKeywordRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3f3c29930f8b"
+						},
+						"m_TurnOnAnim": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/animationnetworks/hitman01/tampering/hm_interact_wrench_120cm_down.aln].pc_rtn",
+								"flag": "9F"
+							}
+						},
+						"m_aPromptPositions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["87da1f8379035557"]
+						},
+						"m_bCanBeOperatedFromAnyAngle": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bActionHasValidDisguise": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bWorldAlignRotateHorizontalOnly": {
+							"type": "bool",
+							"value": true
+						},
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "e5d6336c-4d20-4c36-84a8-a4fd4b1ba300"
+						},
+						"m_aUIHighlightGeom": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["ce5956ad7301043c"]
+						},
+						"name_metricvalue": {
+							"type": "ZString",
+							"value": "Explosive_GasCanister_Large_A"
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_baller_loosenvalve.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_eActionGroupIcon": {
+							"type": "EUIActionGroupIcon",
+							"value": "EUIAGI_Wrench"
+						},
+						"m_bApplyPromptDescriptionText": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fAdditionalAlignRadius": {
+							"type": "float32",
+							"value": -0.05
+						},
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["901aadc818bbad46"]
+						},
+						"m_RequiredItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe982ef9df3bbb"
+						},
+						"actionm_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces_names.sweetmenutext?/setpieces_localization_description_gascanister.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_bRequiresHitmanInFront": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bVRNoAlignment": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bVRForceSwipeAnimation": {
+							"type": "bool",
+							"value": true
+						},
+						"m_vrMotionProgress": {
+							"type": "SEntityTemplateReference",
+							"value": "77b75706037d5417"
+						},
+						"m_rVrPromptLocationOverride": {
+							"type": "SEntityTemplateReference",
+							"value": "77b75706037d5417"
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": "cab8721b74f06454",
+							"postInit": true
+						},
+						"UsabilityConditions": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [],
+							"postInit": true
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "581bab7d3e93df01",
+							"postInit": true
+						},
+						"m_bOverrideInteractionRange": {
+							"type": "bool",
+							"value": true
+						},
+						"m_fOverrideInteractionRangeValue": {
+							"type": "float32",
+							"value": 3.0
+						}
+					},
+					"events": {
+						"OnInteractionAnimEvent": {
+							"Poll": ["10b9d91e3847d9d9"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

@@ -1,0 +1,203 @@
+{
+	"tempHash": "0049082339F7C4E2",
+	"tbluHash": "00BB0E8D2CF65804",
+	"patch": [
+		{ "RemoveEntityByID": "a4de2f516fe74e68" },
+		{ "RemoveEntityByID": "a185a0f472e9d126" },
+		{ "RemoveEntityByID": "edd3375c7e2d67d3" },
+		{ "RemoveEntityByID": "99f1e906a960631d" },
+		{ "RemoveEntityByID": "f6d964b5d66b9805" },
+		{ "RemoveEntityByID": "9fe4e73b3ab7aa23" },
+		{ "RemoveEntityByID": "345bd376443dd988" },
+		{ "RemoveEntityByID": "e07ec0ef5040ec16" },
+		{ "RemoveEntityByID": "8d7db9e649ef74df" },
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"RemoveAllEventConnectionsForTrigger": ["OnActorHit", "Variant"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"RemoveAllEventConnectionsForTrigger": ["OnActorHit", "StunActor"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"RemoveAllEventConnectionsForTrigger": ["OnActorHit", "GetPositionOf"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"RemoveAllEventConnectionsForTrigger": ["OnActorHit", "SetIActor"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"RemoveAllEventConnectionsForTrigger": ["OnActorHit", "IActor"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"e8ce8f20ed5d3a9d",
+				{
+					"AddEventConnection": ["OnActorHit", "Pick", "cafe91039f03d454"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": ["c976c1b07ec4f4a7", { "RemoveAllEventConnectionsForEvent": "OnDying" }]
+		},
+		{
+			"SubEntityOperation": ["c976c1b07ec4f4a7", { "RemoveAllEventConnectionsForEvent": "OnPacified" }]
+		},
+		{
+			"SubEntityOperation": ["c976c1b07ec4f4a7", { "RemoveAllEventConnectionsForEvent": "OnDead" }]
+		},
+		{
+			"SubEntityOperation": ["7121d925631079ae", { "RemovePropertyByName": "m_Entity" }]
+		},
+		{
+			"SubEntityOperation": ["e8bc4884808901ea", { "RemoveAllEventConnectionsForEvent": "Out02" }]
+		},
+		{
+			"SubEntityOperation": [
+				"aae4f1ef40fb25bc",
+				{
+					"SetPropertyValue": {
+						"property_name": "Delay time (ms)",
+						"value": 50
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe91039f03d454",
+				{
+					"parent": "08a54a65d16d113b",
+					"name": "ActorPicker",
+					"factory": "[modules:/zactorpicker.class].pc_entitytype",
+					"blueprint": "[modules:/zactorpicker.class].pc_entityblueprint",
+					"properties": {
+						"m_aEnterEffects": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe82cc436c8f5f"]
+						},
+						"m_aVolumes": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafe90d013ad83bb"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe82cc436c8f5f",
+				{
+					"parent": "08a54a65d16d113b",
+					"name": "ActorPickerEffectDrama",
+					"factory": "[modules:/zactorpickereffectdrama.class].pc_entitytype",
+					"blueprint": "[modules:/zactorpickereffectdrama.class].pc_entityblueprint",
+					"properties": {
+						"m_pDramaTemplate": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/_pro/design/gamecore/deatheffects.template?/deathanimstand_electric.entitytemplate].pc_entitytemplate",
+								"flag": "5F"
+							}
+						},
+						"m_rSetpiece": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee570221892ca"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee570221892ca",
+				{
+					"parent": "08a54a65d16d113b",
+					"name": "Setpiece",
+					"factory": "[modules:/zsetpieceentity.class].pc_entitytype",
+					"blueprint": "[modules:/zsetpieceentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sId": {
+							"type": "ZGuid",
+							"value": "b58519a2-affc-49e8-b315-8f671f38362f"
+						},
+						"m_sTypeId": {
+							"type": "ZGuid",
+							"value": "85958fdb-8296-42f5-86d5-f1cdc1377b20"
+						},
+						"m_rSetpiece": {
+							"type": "SEntityTemplateReference",
+							"value": "08a54a65d16d113b",
+							"postInit": true
+						},
+						"m_rSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": "08a54a65d16d113b",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe90d013ad83bb",
+				{
+					"parent": "08a54a65d16d113b",
+					"name": "ActorPickerVolumeBox",
+					"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+					"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_vGlobalSize": {
+							"type": "SVector3",
+							"value": { "x": 2.0, "y": 2.0, "z": 4.0 }
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "b072d422635b1b9d"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

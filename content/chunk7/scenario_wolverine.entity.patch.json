@@ -1,0 +1,132 @@
+{
+	"tempHash": "00E01DF9C7926AB6",
+	"tbluHash": "002FDDA08897E498",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"81094bd1a8101125",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_mTransform",
+						"value": {
+							"rotation": {
+								"x": 25.20104373754088,
+								"y": 55.104006937411526,
+								"z": -89.39987934806354
+							},
+							"position": {
+								"x": -0.18000899255275726,
+								"y": 5.065764904022217,
+								"z": 0.5636029839515686
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": ["c19817a2d542ed9d", { "SetPropertyPostInit": ["m_rMainItemKey", true] }]
+		},
+		{
+			"SubEntityOperation": ["c19817a2d542ed9d", { "SetPropertyPostInit": ["m_eidParent", true] }]
+		},
+		{
+			"SubEntityOperation": [
+				"dbf5ef5244b30f7f",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_mTransform",
+						"value": {
+							"rotation": {
+								"x": 98.18969895231348,
+								"y": -90.0,
+								"z": 0.0
+							},
+							"position": {
+								"x": -1.0,
+								"y": 2.419524908065796,
+								"z": 0.8303288817405701
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"98341301eae6cb0c",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_mTransform",
+						"value": {
+							"rotation": {
+								"x": 98.18969895231348,
+								"y": -90.0,
+								"z": 0.0
+							},
+							"position": {
+								"x": 0.6325070261955261,
+								"y": -0.747406005859375,
+								"z": 0.8303288817405701
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe912fc3d7c282",
+				{
+					"parent": "426dded1e3f3cef6",
+					"name": "ItemSpawner 2",
+					"factory": "[modules:/zitemspawner.class].pc_entitytype",
+					"blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -102.10905137688394
+								},
+								"position": {
+									"x": 1.2045869827270508,
+									"y": 2.2691121101379395,
+									"z": 0.9999920129776
+								}
+							}
+						},
+						"m_rMainItemKey": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe53a914067fdc"
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "a4e76193066824d3"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe53a914067fdc",
+				{
+					"parent": "426dded1e3f3cef6",
+					"name": "ItemKey_GunBallinBaller",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "374cc35f-877b-4cfd-914b-d059427a9f72"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

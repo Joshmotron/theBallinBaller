@@ -1,0 +1,26 @@
+{
+	"FIREARMS_HERO_PISTOL_BALLINBALLER": {
+		"Guid": "e6037b47-9d57-49d4-abd0-d2fe60c908da",
+		"Type": "weapon",
+		"Subtype": "pistol",
+		"ImageId": "",
+		"RMTPrice": 99,
+		"GamePrice": 99,
+		"IsPurchasable": false,
+		"IsPublished": true,
+		"IsDroppable": false,
+		"Capabilities": [],
+		"Qualities": {},
+		"Properties": {
+			"Name": "FIREARMS_HERO_PISTOL_BALLINBALLER_NAME",
+			"Description": "FIREARMS_HERO_PISTOL_BALLINBALLER_DESC",
+			"Gameplay": {},
+			"Quality": 4,
+			"Rarity": "common",
+			"LoadoutSlot": "concealedweapon",
+			"RepositoryId": "374cc35f-877b-4cfd-914b-d059427a9f72",
+			"AllowUpSync": true
+		},
+		"Rarity": "common"
+	}
+}

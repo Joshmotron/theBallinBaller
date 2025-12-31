@@ -1,0 +1,1437 @@
+{
+	"tempHash": "00A6EB56568EC6DC",
+	"tbluHash": "003939C4F81C06F2",
+	"rootEntity": "cafe26d2e8ac03f1",
+	"entities": {
+		"cafe3069a804806f": {
+			"parent": "cafe726f344055fd",
+			"name": "PosBox_MuzzleExit",
+			"factory": "[modules:/zcompositeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zcompositeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": {
+							"x": -0.0017729999963194132,
+							"y": 0.13811400532722473,
+							"z": 0.0451200008392334
+						}
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd",
+					"postInit": true
+				}
+			}
+		},
+		"cafea28a89095b5f": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "HideClipBoneName",
+			"factory": "[modules:/zhm5valueentity_zstring.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5valueentity_zstring.class].pc_entityblueprint",
+			"properties": {
+				"m_bForwardOnSet": { "type": "bool", "value": false },
+				"m_Value": { "type": "ZString", "value": "w_bone_clip" },
+				"m_bLocalize": { "type": "bool", "value": false }
+			},
+			"events": { "Value": { "HideBone": ["cafe726f344055fd"] } }
+		},
+		"cafe5153d63df26e": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Gun_Slide",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/vr_slide/hm_slide_singlehardballer.xmd?/gun_slide_hardballers.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": { "type": "ZString", "value": "Slide" }
+			}
+		},
+		"cafeb41cb9244ca5": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_WEAPON_ICA_SMALL",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_ica_small.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_ica_small.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe6d4f08c22e9c": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "HM5CamFov",
+			"factory": "[modules:/zhm5camfoventity.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5camfoventity.class].pc_entityblueprint",
+			"properties": {
+				"m_fFov1Max": { "type": "float32", "value": 0.5 },
+				"m_fFov1Min": { "type": "float32", "value": 0.3 },
+				"m_fFov2Max": { "type": "float32", "value": -0.05 },
+				"m_fFov2Min": { "type": "float32", "value": -0.1 },
+				"m_fBlendIn1": { "type": "float32", "value": 0.001 },
+				"m_fBlendIn2": { "type": "float32", "value": 0.05 },
+				"m_fBlendOut": { "type": "float32", "value": 0.02 }
+			}
+		},
+		"cafe17218aa92897": {
+			"parent": "cafed62f5571d86f",
+			"name": "EntityTrack",
+			"factory": "[modules:/zentitygroup.class].pc_entitytype",
+			"blueprint": "[modules:/zentitygroup.class].pc_entityblueprint",
+			"properties": {
+				"m_targetEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe3fd183d56005",
+					"postInit": true
+				},
+				"m_aTracksAndGroups": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafedd5c5a83dafd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafed150ab094c71": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Weapon Event Consumer",
+			"factory": "[modules:/zhm5weaponeventconsumer.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5weaponeventconsumer.class].pc_entityblueprint",
+			"events": {
+				"ShowClip": { "Get": ["cafe3a157f8493b0"] },
+				"HideClip": { "Get": ["cafea28a89095b5f"] },
+				"SpawnPhysicsClip": { "InNoVR": ["cafe5dd19a47f877"] }
+			}
+		},
+		"cafe0732ce0d0fc5": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "EventConsumerCollection",
+			"factory": "[modules:/zeventconsumercollection.class].pc_entitytype",
+			"blueprint": "[modules:/zeventconsumercollection.class].pc_entityblueprint",
+			"properties": {
+				"m_BaseEventConsumers": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafed150ab094c71"]
+				}
+			}
+		},
+		"cafee725c2750aa9": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "SingleGun",
+			"factory": "[modules:/zvariationresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zvariationresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_VariationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/animationdatabases/hm5_weapons.aset?/singlegun.asva].pc_asva",
+						"flag": "5F"
+					}
+				}
+			}
+		},
+		"cafeeba620b259df": {
+			"parent": "cafe726f344055fd",
+			"name": "PosBox_CartridgeEject",
+			"factory": "[modules:/zcompositeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zcompositeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": -3.632592272676859,
+							"y": -45.85062032035997,
+							"z": -2.1236669926829923
+						},
+						"position": {
+							"x": 0.017928000539541245,
+							"y": 0.009569999761879444,
+							"z": 0.05631199851632118
+						}
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd",
+					"postInit": true
+				}
+			}
+		},
+		"cafe0488346c5051": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "GUN_DualHardBaller_Reload_Left",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/reload/hm_dualhardballer_reload.xmd?/gun2_dualhardballer_reload.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": {
+					"type": "ZString",
+					"value": "DualReloadLeft"
+				}
+			}
+		},
+		"cafedaa103e4b4fa": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_WEAPON_FIREARM",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_firearm.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_firearm.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafee8cd0c2402ab": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_WEAPON_FIREARM_1H",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_firearm_1h.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_firearm_1h.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafeff2365bca510": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "PlacementVolume",
+			"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": {
+							"x": 0.0,
+							"y": 0.0689999982714653,
+							"z": -0.009999999776482582
+						}
+					}
+				},
+				"m_vGlobalSize": {
+					"type": "SVector3",
+					"value": {
+						"x": 0.019999999552965164,
+						"y": 0.33000001311302185,
+						"z": 0.12999999523162842
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd",
+					"postInit": true
+				}
+			}
+		},
+		"cafe99907d7cf9e8": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "AmmoProperties_Hero_Pistol",
+			"factory": "[modules:/zhm5ammoproperties.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5ammoproperties.class].pc_entityblueprint",
+			"properties": {
+				"m_fBlodSplatSizeMultiplier": {
+					"type": "float32",
+					"value": 3.0
+				},
+				"m_fTracerEveryNthBullet": { "type": "int32", "value": 3 }
+			}
+		},
+		"cafed62f5571d86f": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Hardballer_Rumble",
+			"factory": "[modules:/zsequenceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zsequenceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_duration": {
+					"type": "ZGameTime",
+					"value": { "m_nTicks": 125829 }
+				},
+				"m_aTracksAndGroups": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe17218aa92897"]
+				}
+			}
+		},
+		"cafe4ff48389637e": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "RandomFloat32Entity",
+			"factory": "[modules:/zrandentity_float32.class].pc_entitytype",
+			"blueprint": "[modules:/zrandentity_float32.class].pc_entityblueprint"
+		},
+		"cafe4c1ed90fba1f": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "AnimPlayerEntity",
+			"factory": "[modules:/zanimplayerentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimplayerentity.class].pc_entityblueprint",
+			"properties": {
+				"m_pEventConsumerCollection": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe0732ce0d0fc5"
+				},
+				"m_bTrajectoryEnabled": { "type": "bool", "value": false },
+				"m_fAnimTime": { "type": "float32", "value": 0.0 },
+				"m_bLoop": { "type": "bool", "value": false },
+				"m_AnimPlayListEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe6637d5f6a712",
+					"postInit": true
+				},
+				"m_LinkedEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd",
+					"postInit": true
+				}
+			}
+		},
+		"cafe42e6fb5cafc1": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "DebugBox",
+			"factory": "[modules:/zdebugboxentity.class].pc_entitytype",
+			"blueprint": "[modules:/zdebugboxentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": { "x": 0.0, "y": 0.0, "z": 0.0 }
+					}
+				},
+				"m_rBoxVolume": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeff2365bca510"
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeff2365bca510"
+				},
+				"m_Color": { "type": "SColorRGBA", "value": "#6cf56cff" },
+				"m_bForceVisible": { "type": "bool", "value": true },
+				"m_eDrawLayer": {
+					"type": "ZDebugSpatialEntity.EDrawLayer",
+					"value": "DL_ALIGNMENT"
+				},
+				"m_bSelectVisibleOnly": { "type": "bool", "value": false }
+			}
+		},
+		"cafe8ba1e7fd4acf": {
+			"parent": "cafedd5c5a83dafd",
+			"name": "Boolean",
+			"factory": "[modules:/zbooleansource.class].pc_entitytype",
+			"blueprint": "[modules:/zbooleansource.class].pc_entityblueprint",
+			"properties": {
+				"m_startTime": {
+					"type": "ZGameTime",
+					"value": { "m_nTicks": 0 }
+				},
+				"m_duration": {
+					"type": "ZGameTime",
+					"value": { "m_nTicks": 262144 }
+				},
+				"m_fTimes": {
+					"type": "TArray<ZGameTime>",
+					"value": [{ "m_nTicks": 0 }, { "m_nTicks": 125829 }]
+				},
+				"m_bValues": {
+					"type": "TArray<bool>",
+					"value": [true, false]
+				}
+			}
+		},
+		"cafe078e6345d9e7": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "GUN_SingleHardBaller_Reload",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/reload/hm_singlehardballer_reload.xmd?/gun_singlehardballer_reload.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": { "type": "ZString", "value": "Reload" }
+			}
+		},
+		"cafe29bc3d472afa": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Gun_Single_SilverBaller_Firing",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/firing/gun_single_silverballer_firing.xmd?/gun_single_silverballer_firing.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": { "type": "ZString", "value": "Fire" }
+			}
+		},
+		"cafec3e860a4e468": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "DualGuns",
+			"factory": "[modules:/zvariationresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zvariationresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_VariationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/animationdatabases/hm5_weapons.aset?/dualguns.asva].pc_asva",
+						"flag": "5F"
+					}
+				}
+			}
+		},
+		"cafe783bdc0320be": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "VariationListEntity",
+			"factory": "[modules:/zvariationlistentity.class].pc_entitytype",
+			"blueprint": "[modules:/zvariationlistentity.class].pc_entityblueprint",
+			"properties": {
+				"m_VariationList": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafee725c2750aa9", "cafec3e860a4e468"]
+				}
+			}
+		},
+		"cafe3cc0039ba2cf": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Gun_Single_SilverBaller_FinalShot",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/firing/gun_single_silverballer_firing.xmd?/gun_single_silverballer_finalshot.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": { "type": "ZString", "value": "FinalShot" }
+			}
+		},
+		"cafe3a157f8493b0": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "ShowClipBoneName",
+			"factory": "[modules:/zhm5valueentity_zstring.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5valueentity_zstring.class].pc_entityblueprint",
+			"properties": {
+				"m_Value": { "type": "ZString", "value": "w_bone_clip" },
+				"m_bForwardOnSet": { "type": "bool", "value": false },
+				"m_bLocalize": { "type": "bool", "value": false }
+			},
+			"events": { "Value": { "ShowBone": ["cafe726f344055fd"] } }
+		},
+		"cafedd5c5a83dafd": {
+			"parent": "cafe17218aa92897",
+			"name": "m_bActive Track",
+			"factory": "[modules:/zentitypropertytrack.class].pc_entitytype",
+			"blueprint": "[modules:/zentitypropertytrack.class].pc_entityblueprint",
+			"properties": {
+				"m_sPropertyName": {
+					"type": "ZString",
+					"value": "m_bActive"
+				},
+				"m_entityGroup": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe17218aa92897"
+				},
+				"m_aItems": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe8ba1e7fd4acf"]
+				}
+			},
+			"platformSpecificProperties": {
+				"PS5": {
+					"m_sPropertyName": {
+						"type": "ZString",
+						"value": "PS5_DontUse"
+					}
+				}
+			}
+		},
+		"cafe3fd183d56005": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "ZRumbleEntity",
+			"factory": "[modules:/zrumbleentity.class].pc_entitytype",
+			"blueprint": "[modules:/zrumbleentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fRightRPM": { "type": "float32", "value": 0.5 },
+				"m_fLeftRPM": { "type": "float32", "value": 0.5 }
+			}
+		},
+		"cafe5dd19a47f877": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "VRHelper_SignalGate",
+			"factory": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_signalgate.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_signalgate.entitytemplate].pc_entityblueprint",
+			"events": { "OutNoVR": { "SpawnClip": ["cafe726f344055fd"] } }
+		},
+		"cafe21536d30f2c2": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "KeywordEntity_DIALOGUE_GUN",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordaidialogue.template?/keywordentity_dialogue_gun.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordaidialogue.template?/keywordentity_dialogue_gun.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe74032b53f154": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "DebugAnim_Slide",
+			"factory": "[modules:/zmetricvalue_zstring.class].pc_entitytype",
+			"blueprint": "[modules:/zmetricvalue_zstring.class].pc_entityblueprint",
+			"properties": {
+				"m_value": { "type": "ZString", "value": "Slide" }
+			},
+			"events": { "Value": { "SelectAnim": ["cafe4c1ed90fba1f"] } }
+		},
+		"cafe726f344055fd": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Firearm_Model_Pistol_Classic_A",
+			"factory": "[assembly:/_pro/items/templates/firearms/pistol_classic_a.template?/firearm_model_pistol_classic_a.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/items/templates/firearms/pistol_classic_a.template?/firearm_model_pistol_classic_a.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": -0.00022918311747247523,
+							"y": 0.000572957780599778,
+							"z": 2.291830575204098e-9
+						},
+						"position": {
+							"x": 0.0,
+							"y": 0.0,
+							"z": -0.0001900000061141327
+						}
+					}
+				},
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_DYNAMIC"
+				},
+				"m_eGlowType": {
+					"type": "ERenderGlowTypes",
+					"value": "ERENDERGLOWTYPE_ITEMS"
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe26d2e8ac03f1",
+					"postInit": true
+				}
+			},
+			"events": {
+				"DEBUG": {
+					"Play": ["cafe4c1ed90fba1f"],
+					"GetValue": ["cafe74032b53f154"]
+				}
+			}
+		},
+		"cafeec62011c9836": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "GUN_DualHardBaller_Reload_Right",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/reload/hm_dualhardballer_reload.xmd?/gun_dualhardballer_reload.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": {
+					"type": "ZString",
+					"value": "DualReloadRight"
+				}
+			}
+		},
+		"cafe645589697550": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_WEAPON_SMALL",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_small.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_small.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"]
+				}
+			}
+		},
+		"cafe252d38e661e3": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "DebugAnim_Reload",
+			"factory": "[modules:/zmetricvalue_zstring.class].pc_entitytype",
+			"blueprint": "[modules:/zmetricvalue_zstring.class].pc_entityblueprint",
+			"properties": {
+				"m_value": { "type": "ZString", "value": "Reload" }
+			},
+			"events": { "Value": { "SelectAnim": ["cafe4c1ed90fba1f"] } }
+		},
+		"cafe22b1d16ab652": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "GUN_SingleHardBaller_Crouch_Reload",
+			"factory": "[modules:/zanimresourceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimresourceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_animationResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/animations/hitman01/movement/019_weapon actions/reload/hm_singlehardballer_crouch_reload.xmd?/gun_singlehardballer_crouch_reload.xmdtake](cutsequence).pc_animation",
+						"flag": "5F"
+					}
+				},
+				"m_sAnimName": {
+					"type": "ZString",
+					"value": "Crouch_Reload"
+				}
+			}
+		},
+		"cafe6637d5f6a712": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "AnimPlayListEntity",
+			"factory": "[modules:/zanimplaylistentity.class].pc_entitytype",
+			"blueprint": "[modules:/zanimplaylistentity.class].pc_entityblueprint",
+			"properties": {
+				"m_AnimList": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						"cafe29bc3d472afa",
+						"cafe3cc0039ba2cf",
+						"cafe078e6345d9e7",
+						"cafeec62011c9836",
+						"cafe0488346c5051",
+						"cafe22b1d16ab652",
+						"cafe5153d63df26e"
+					]
+				}
+			}
+		},
+		"cafebb47c55f0fa6": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "PropHelper_Item_Placement",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_item_placement.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_item_placement.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": 180.0,
+							"y": 89.99983794485559,
+							"z": 0.0
+						},
+						"position": {
+							"x": -0.02007400058209896,
+							"y": 0.0,
+							"z": 0.0
+						}
+					}
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				}
+			}
+		},
+		"cafe0f26641f6763": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "WeaponModularCore",
+			"factory": "[assembly:/_pro/design/gamecore/itemcore.template?/weaponmodularcore.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/itemcore.template?/weaponmodularcore.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_Geom": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				},
+				"m_rGeomentity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				},
+				"m_AmmoProperties": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe99907d7cf9e8"
+				},
+				"m_MuzzleExit": {
+					"type": "SEntityTemplateReference",
+					"value": {
+						"ref": "cafe726f344055fd",
+						"externalScene": null,
+						"exposedEntity": "MuzzleExit"
+					}
+				},
+				"m_CartridgeEject": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeeba620b259df"
+				},
+				"m_ridClipTemplate": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/_pro/items/templates/firearms/ammunition/shells.template?/cartridge_45acp_silverballer_a.entitytemplate].pc_entitytemplate",
+						"flag": "5F"
+					}
+				},
+				"m_CollisionResourceID": {
+					"type": "ZRuntimeResourceID",
+					"value": {
+						"resource": "[assembly:/_pro/items/geometry/firearms/frames/pistol_classic_a/pistol_classic_a_rig.wl2?/pistol_classic_a_collision.prim].pc_coll",
+						"flag": "5F"
+					}
+				},
+				"m_fMass": {
+					"type": "float32",
+					"value": 1.100000023841858
+				},
+				"m_WeaponType": {
+					"type": "eWeaponType",
+					"value": "WT_SLOWGUN"
+				},
+				"AnimPlayer": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe4c1ed90fba1f"
+				},
+				"m_pVariationResource": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe783bdc0320be"
+				},
+				"m_eAnimationCategory": {
+					"type": "EWeaponAnimationCategory",
+					"value": "eWAC_Pistol"
+				},
+				"m_fCartridgeEjectForceMultiplier": {
+					"type": "float32",
+					"value": 8.0
+				},
+				"m_bKinematic": { "type": "bool", "value": true },
+				"m_rHolder": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				},
+				"m_bRandomStartState": { "type": "bool", "value": true },
+				"m_PosPlacementAttach": {
+					"type": "SEntityTemplateReference",
+					"value": "cafebb47c55f0fa6"
+				},
+				"m_PlacementVolume": {
+					"type": "SEntityTemplateReference",
+					"value": "cafeff2365bca510"
+				},
+				"VRReloadClipMeshProviders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						{
+							"ref": "cafe726f344055fd",
+							"externalScene": null,
+							"exposedEntity": "ClipSpawners"
+						}
+					]
+				},
+				"m_aManualReloadSettings": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						{
+							"ref": "cafe726f344055fd",
+							"externalScene": null,
+							"exposedEntity": "ManualReloadSettings"
+						}
+					]
+				},
+				"m_eidParent1": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd",
+					"postInit": true
+				},
+				"m_aClipAlignPoses": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						{
+							"ref": "cafe726f344055fd",
+							"externalScene": null,
+							"exposedEntity": "HandPoses"
+						}
+					],
+					"postInit": true
+				}
+			},
+			"events": {
+				"EjectCartridgeHitman": {
+					"ActivateShellFX": ["cafe726f344055fd"]
+				},
+				"OnFireProjectilesLocal": {
+					"Start": ["cafed62f5571d86f"],
+					"Activate": ["cafeac1b9fff229b", "cafe6d4f08c22e9c"]
+				}
+			},
+			"outputCopying": {
+				"OwnedByHitman": { "OwnedByHitman": ["cafe26d2e8ac03f1"] }
+			},
+			"subsets": {
+				"AudioEmitters": ["cafe26d2e8ac03f1"],
+				"Replicable": ["cafe26d2e8ac03f1"]
+			}
+		},
+		"cafe26d2e8ac03f1": {
+			"parent": null,
+			"name": "Firearms_Hero_Pistol_BallinBaller_Runtime",
+			"factory": "[modules:/zcompositeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zcompositeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": -0.0, "y": 0.0, "z": -0.0 },
+						"position": { "x": 1.0, "y": 0.0, "z": 0.5 }
+					}
+				},
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_DYNAMIC"
+				}
+			},
+			"inputCopying": {
+				"SetGlowType": { "SetGlowType": ["cafe726f344055fd"] }
+			},
+			"propertyAliases": {
+				"Kinematic": [
+					{
+						"originalProperty": "Kinematic",
+						"originalEntity": "cafe0f26641f6763"
+					}
+				],
+				"m_bStartSleeping": [
+					{
+						"originalProperty": "m_bStartSleeping",
+						"originalEntity": "cafe0f26641f6763"
+					}
+				],
+				"m_nNumberOfAmmo": [
+					{
+						"originalProperty": "m_nNumberOfAmmo",
+						"originalEntity": "cafe0f26641f6763"
+					}
+				]
+			},
+			"exposedEntities": {
+				"Geometry": {
+					"isArray": false,
+					"refersTo": ["cafe726f344055fd"]
+				}
+			},
+			"exposedInterfaces": {
+				"IItemBase": "cafe0f26641f6763",
+				"IFirearm": "cafe0f26641f6763",
+				"IAnimPlayerEntity": "cafe4c1ed90fba1f",
+				"ZHM5Item": "cafe0f26641f6763",
+				"ZHM5ItemWeapon": "cafe0f26641f6763",
+				"IItemWeapon": "cafe0f26641f6763",
+				"IItem": "cafe0f26641f6763"
+			}
+		},
+		"cafe687052ecc276": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_WEAPON_PISTOL",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_pistol.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_pistol.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"]
+				}
+			}
+		},
+		"cafeac1b9fff229b": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "HM5CamShakerEntity",
+			"factory": "[modules:/zhm5camshakerentity.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5camshakerentity.class].pc_entityblueprint",
+			"properties": {
+				"m_bUseDistanceScale": { "type": "bool", "value": true },
+				"m_fRangeH": { "type": "float32", "value": 0.0 },
+				"m_fRangeV": { "type": "float32", "value": 0.0 },
+				"m_fFrequency": { "type": "float32", "value": 0.0 },
+				"m_fSustain": { "type": "float32", "value": 0.0 },
+				"m_fRelease": { "type": "float32", "value": 0.0 },
+				"m_fNearRadius": { "type": "float32", "value": 0.0 },
+				"m_fFarRadius": { "type": "float32", "value": 0.0 },
+				"m_bEnabled": { "type": "bool", "value": false },
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				},
+				"m_fRangeRoll": { "type": "float32", "value": 0.0 },
+				"m_fDelay": { "type": "float32", "value": 0.0 },
+				"m_eChannel": {
+					"type": "ECameraShakerChannel",
+					"value": "eCameraShakerChannel_Weapon"
+				}
+			}
+		},
+		"cafecd4156a8fa90": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEMRULE_LEGAL",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_itemrule_legal.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_itemrule_legal.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe49620d6c96d5": {
+			"parent": "cafe26d2e8ac03f1",
+			"name": "Keywords",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafeda5dc902fcb9": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_STATE_GOT_KEY",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_key.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_key.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				},
+				"m_rHolder": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				}
+			}
+		},
+		"cafeee949b3c3a10": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_PNEUMATICWRENCH",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_pneumaticwrench.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_pneumaticwrench.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe3b5f8a922dd9": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSITMASTERKEY",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_depositmasterkey.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_depositmasterkey.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafeda18d7da8590": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_JANITORKEY",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_janitorkey.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_janitorkey.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafea0a342b5f654": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_BALLINBALLER",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe22a1e2c5050c": {
+			"parent": "cafee60961eac433",
+			"name": "Keyword_QUESTITEM_HOKKAIDO_RFID_MASTERCHIP",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_questitem_hokkaido_rfid_masterchip.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_questitem_hokkaido_rfid_masterchip.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafefdd463d94836": {
+			"parent": "cafe467d312886a4",
+			"name": "Keyword_QUESTITEM_BANGKOK_ROOMMASTER_KEYCARD",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_questitem_bangkok_roommaster_keycard.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_questitem_bangkok_roommaster_keycard.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe236fd135d00c": {
+			"parent": "cafef7234a160009",
+			"name": "Keyword_KEYCARD_ITALY_MANSION_LAB",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_italy_mansion_lab.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_italy_mansion_lab.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe1a3fddf34b29": {
+			"parent": "cafe2bde561fa03c",
+			"name": "Keyword_KEYCARD_MIAMI_DEREKMCINNISID",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_miami_derekmcinnisid.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_miami_derekmcinnisid.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe79b2ecb957c8": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_STATE_GOT_KEYCARD",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_keycard.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_keycard.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				},
+				"m_rHolder": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe726f344055fd"
+				}
+			}
+		},
+		"cafe6d6f452c60c7": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEYCARD_RACCOON_CEOKEYCARD",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_ceokeycard.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_ceokeycard.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe948cacc2b152": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEYCARD_RACCOON_HIGHSECURITY",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_highsecurity.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_highsecurity.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe3d203b4ad152": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEYCARD_RACCOON_VAULTKEYCARD",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_vaultkeycard.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_raccoon_vaultkeycard.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafecd3fa5e43cc7": {
+			"parent": "cafef7234a160009",
+			"name": "Keyword_KEYCARD_ITALY_MANSION_ENTRANCE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_italy_mansion_entrance.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_italy_mansion_entrance.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe8a560c6234d8": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_SCREWDRIVER",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_screwdriver.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_screwdriver.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe7629e20624b0": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_WRENCH",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_wrench.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_wrench.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe3584e721b736": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Whittleton Creek (Skunk)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe4872cca0003f": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_CASSIDY_HOUSE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_cassidy_house.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_cassidy_house.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe25187529dba8": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_EXIT_CONSTRUCTION_VAN",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_exit_construction_van.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_exit_construction_van.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafed98ab490e815": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_EXIT_ROADWORK",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_exit_roadwork.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_exit_roadwork.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafea7d62ac8db74": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEYCARD_SKUNK_VAULT",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_skunk_vault.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_keycard_skunk_vault.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe00d2c110767b": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_GRANNY_HOUSE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_granny_house.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_granny_house.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe77657f330e48": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_JANUS_HOUSE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_janus_house.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_janus_house.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafec917c0d3b9c5": {
+			"parent": "cafe3584e721b736",
+			"name": "Keyword_KEY_SKUNK_FORSALE_HOUSE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_forsale_house.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_skunk_forsale_house.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe43fe39053bc7": {
+			"parent": "cafe49620d6c96d5",
+			"name": "New York (Raccoon)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe71382d10eb2b": {
+			"parent": "cafe38fd3fd12e41",
+			"name": "Keyword_KEYCARD_MARAKESH_EMBASSY_MASTER",
+			"factory": "[assembly:/_pro/design/items/prop_keys_runtimes.template?/prop_keycard_marakesh_embassy_master_runtime.entitytemplate].pc_entitytemplate",
+			"blueprint": "[assembly:/_pro/design/items/prop_keys_runtimes.template?/prop_keycard_marakesh_embassy_master_runtime.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe0f3da2fe1e98": {
+			"parent": "cafe38fd3fd12e41",
+			"name": "Keyword_KEY_MARRAKECH_EMBASSY_STAFF_CAR",
+			"factory": "[assembly:/_pro/design/items/prop_keys_runtimes.template?/prop_key_marrakech_embassy_staff_car_runtime.entitytemplate].pc_entitytemplate",
+			"blueprint": "[assembly:/_pro/design/items/prop_keys_runtimes.template?/prop_key_marrakech_embassy_staff_car_runtime.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe38fd3fd12e41": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Marrakesh (Spider)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe2bde561fa03c": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Miami",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe2a7fea4b6823": {
+			"parent": "cafe2bde561fa03c",
+			"name": "Keyword_KEY_MIAMI_FOODVENDOR",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_miami_foodvendor.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_miami_foodvendor.entitytemplate].pc_entityblueprint"
+		},
+		"cafe68e20c1089e0": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSIT1",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit1.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit1.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe7d3b9436ce04": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSIT2",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit2.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit2.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafee4f44225aadb": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSIT3",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit3.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit3.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe608ef70f2f26": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSIT4",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit4.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_deposit4.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe27db947c57c4": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_DEPOSITCEO",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_depositceo.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_depositceo.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafef01f86101829": {
+			"parent": "cafe43fe39053bc7",
+			"name": "Keyword_KEY_RACCOON_MONEYTRANSPORT",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_moneytransport.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordkeys.template?/keyword_key_raccoon_moneytransport.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe6fffad4960b3": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_LEGAL01",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafed2d2ccd17c05": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Prof_Hero_SignatureSuit",
+			"factory": "[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entityblueprint"
+		},
+		"cafe962070af9cfe": {
+			"parent": "cafe38fd3fd12e41",
+			"name": "Keyword_STATE_GOT_INVITATION_MARRAKECH_MEMBERSCLUB",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_invitation_marrakech_membersclub.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordstates.template?/keyword_state_got_invitation_marrakech_membersclub.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe467d312886a4": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Bangkok (Tiger)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafef7234a160009": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Italy (Octopus)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafee60961eac433": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Hokkaido (Snowcrane)",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe3014874b80bc": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_FOLDINGKNIFE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_foldingknife.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_foldingknife.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		},
+		"cafe8f03a46b2165": {
+			"parent": "cafe49620d6c96d5",
+			"name": "Keyword_ITEM_SNIPER_RIFLE",
+			"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_sniper_rifle.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_sniper_rifle.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aHolders": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["cafe726f344055fd"],
+					"postInit": true
+				}
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}
