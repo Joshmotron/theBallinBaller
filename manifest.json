@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "1.1.5",
+	"version": "1.0.0",
 	"id": "Ballin.Baller9000",
 	"name": "The Ballin' Baller 1.1.5",
 	"description": "The Ultimate(?) Cheat Gun",
@@ -45,5 +45,6 @@
 			"FIREARMS_HERO_PISTOL_BALLINBALLER_DESC": "Created by Derek McInnis and Hector Delgado. These two men, brought together to fight back against those who mocked them, began a most fruitful collaboration to forge the deadliest weapon a single person may carry. Luckily for you, Diana is very persuasive. Contains an ingenious design to allow six different magazines in one: mostly harmless bullets, emetic darts, sedative darts, accidental shockwaves, lethal shockwaves, and taser darts."
 		}
 	},
-	"frameworkVersion": "2.33.33"
+	"frameworkVersion": "2.33.33",
+	"updateCheck": "https://github.com/Joshmotron/theBallinBaller/releases/latest/download/updates.json"
 }
