@@ -1,1 +1,12 @@
-{"customPaths":["[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype","[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint","[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entitytemplate","[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entityblueprint","[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_ballinballer.entitytemplate].pc_entitytype","[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_ballinballer.entitytemplate].pc_entityblueprint","[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entitytype","[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entityblueprint"]}
+{
+	"customPaths": [
+		"[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entitytype",
+		"[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_ballinballer.entitytemplate].pc_entityblueprint",
+		"[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entitytemplate",
+		"[assembly:/_pro/design/items/firearm_modular_runtimes.template?/firearms_hero_pistol_ballinballer_runtime.entitytemplate].pc_entityblueprint",
+		"[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_ballinballer.entitytemplate].pc_entitytype",
+		"[assembly:/_pro/design/gamecore/setpiecehelpers.template?/setpiecehelpers_activator_ballinballer.entitytemplate].pc_entityblueprint",
+		"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entitytype",
+		"[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entityblueprint"
+	]
+}

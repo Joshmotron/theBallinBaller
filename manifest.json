@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"id": "Ballin.Baller9000",
 	"name": "The Ballin' Baller: The Ultimate(?) Cheat Gun.",
 	"description": "The Ultimate(?) Cheat Gun. A ridiculously overpowered gun that contains six different types of ammo, is able to mimic all tools (except crowbar), is a lockpick, a master RFID chip, and more. Many actions that require a tool that were illegal are now legal.",
