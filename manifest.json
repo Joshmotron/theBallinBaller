@@ -4,7 +4,7 @@
 	"id": "Ballin.Baller9000",
 	"name": "The Ballin' Baller",
 	"description": "The Ultimate(?) Cheat Gun. A ridiculously overpowered gun that contains six different types of ammo, is able to mimic all tools (except crowbar), is a lockpick, a master RFID chip, and more. Many actions that require a tool that were illegal are now legal.",
-	"authors": ["Reverend Tim Tom"],
+	"authors": ["The Reverend Tim Tom"],
 	"contentFolders": ["content"],
 	"blobsFolders": ["blobs"],
 	"localisedLines": {
