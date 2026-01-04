@@ -1,7 +1,7 @@
 {
-	"tempHash": "",
-	"tbluHash": "",
-	"rootEntity": "fffffffffffffffe",
+	"tempHash": "004C81659C70EA31",
+	"tbluHash": "0079EB9D76126A36",
+	"rootEntity": "cafe4eff869e47bc",
 	"entities": {
 		"cafe90636f5cd4b4": {
 			"parent": "cafe4eff869e47bc",
@@ -1497,7 +1497,7 @@
 	"pinConnectionOverrides": [],
 	"pinConnectionOverrideDeletes": [],
 	"externalScenes": [],
-	"subType": "scene",
+	"subType": "template",
 	"quickEntityVersion": 3.1,
 	"extraFactoryDependencies": [],
 	"extraBlueprintDependencies": [],

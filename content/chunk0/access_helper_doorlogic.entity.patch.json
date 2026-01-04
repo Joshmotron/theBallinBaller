@@ -118,8 +118,8 @@
 				{
 					"parent": "96aaa4b84aac2399",
 					"name": "IS_UseBallinBaller",
-					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entitytype",
-					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate.entitytemplate].pc_entityblueprint",
+					"factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction_noinvestigate_ballinballer.entitytemplate].pc_entityblueprint",
 					"properties": {
 						"m_eActionType": {
 							"type": "EActionType",
